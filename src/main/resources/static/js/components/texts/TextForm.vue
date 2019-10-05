@@ -1,8 +1,18 @@
 <template>
-    <div>
-        <input type="text" placeholder="Type any text" v-model="text" />
-        <input type="button" value="Save" @click="save" />
-    </div>
+    <v-layout row>
+        <v-form>
+            <v-text-field
+                    label="New text"
+                    placeholder="Type here"
+                    v-model="text"
+            />
+            <v-btn @click="save">
+                Save
+            </v-btn>
+
+        </v-form>
+
+    </v-layout>
 </template>
 
 <script>
@@ -33,4 +43,8 @@
 </script>
 
 <style>
+    button {
+        margin-left: 0 !important;
+        margin-top: 0 !important;
+    }
 </style>

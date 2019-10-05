@@ -1,10 +1,16 @@
 <template>
     <div style="position: relative; width: 300px;">
         <text-form :texts="texts" :textAttr="text" />
-        <div v-for="text in texts">
-            {{ text.text }}
-            <span style="position: absolute; right: 0"></span>
-        </div>
+        <v-layout align-space-around justify-start column>
+            <v-card class="my-2">
+                <v-card-text primary-title
+                             v-for="text in texts"
+                             v-bind:data="text"
+                             v-bind:key="text.text">
+                    {{ text.text }}
+                </v-card-text>
+            </v-card>
+        </v-layout>
     </div>
 </template>
 
