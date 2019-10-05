@@ -4,8 +4,9 @@
 
 **Инструкция по применению**
 
-- Клонируем себе `https://github.com/abaykerimov/test-project`
-- Делаем `yarn install`
-- Стартуем фронт через `yarn start`
+- Клонируем себе проект: `git clone https://github.com/abaykerimov/test-project`
+- Загружаем необходимые пакеты: `yarn install`
+- Стартуем фронт: `yarn start`
+- Стартуем сервер
 - Переходим на `localhost:9000`
 - Проверяем
