@@ -10,8 +10,12 @@ import java.util.List;
 @Service
 public class TextServiceImpl implements TextService {
 
+    private final TextRepo textRepo;
+
     @Autowired
-    private TextRepo textRepo;
+    public TextServiceImpl(TextRepo textRepo) {
+        this.textRepo = textRepo;
+    }
 
     public Text addText(Text text) {
         textRepo.insert(text);

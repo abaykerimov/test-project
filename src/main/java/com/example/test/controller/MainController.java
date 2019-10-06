@@ -10,8 +10,12 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/")
 public class MainController {
 
+    private final TextService textService;
+
     @Autowired
-    TextService textService;
+    public MainController(TextService textService) {
+        this.textService = textService;
+    }
 
     @GetMapping
     public String main(Model model) {

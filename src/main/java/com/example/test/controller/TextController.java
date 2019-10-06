@@ -11,8 +11,12 @@ import java.util.List;
 @RequestMapping("text")
 public class TextController {
 
+    private final TextService textService;
+
     @Autowired
-    TextService textService;
+    public TextController(TextService textService) {
+        this.textService = textService;
+    }
 
     @GetMapping
     public List<Text> list() {
