@@ -6,7 +6,7 @@
                 <v-card-text primary-title
                              v-for="text in texts"
                              v-bind:data="text"
-                             v-bind:key="text.text">
+                             v-bind:key="text.id">
                     {{ text.text }}
                 </v-card-text>
             </v-card>

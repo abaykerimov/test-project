@@ -1,6 +1,6 @@
 package com.example.test.controller;
 
-import com.example.test.repos.TextRepo;
+import com.example.test.service.text.TextService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.*;
 public class MainController {
 
     @Autowired
-    TextRepo textRepo;
+    TextService textService;
 
     @GetMapping
     public String main(Model model) {
-        model.addAttribute("textData", textRepo.findAll());
+        model.addAttribute("textData", textService.getAll());
         return "index";
     }
 }

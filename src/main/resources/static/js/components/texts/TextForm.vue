@@ -9,9 +9,7 @@
             <v-btn @click="save">
                 Save
             </v-btn>
-
         </v-form>
-
     </v-layout>
 </template>
 
